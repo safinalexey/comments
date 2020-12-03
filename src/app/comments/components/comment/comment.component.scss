@@ -1,0 +1,43 @@
+:host {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.comment-container {
+
+	border-radius: 3px;
+	border: 1px solid lightgray;
+
+	.header {
+		background-color: lightgray;
+		display: flex;
+		justify-content: space-between;
+
+		h2 {
+			margin-bottom: 0;
+			padding: 5px;
+		}
+
+		.buttons {
+			[mat-stroked-button] {
+				border-color: rgba(0, 0, 0, 0.3);
+				margin-right: 30px;
+			}
+		}
+	}
+
+	.content {
+		padding: 5px;
+
+		p {
+			margin-bottom: 0;
+
+		}
+
+		.tags {
+			margin-top: 10px;
+		}
+	}
+
+}
+

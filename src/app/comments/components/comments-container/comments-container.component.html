@@ -1,0 +1,19 @@
+<div class="header">
+	<h1>Comments</h1>
+	<mat-chip-list aria-label="Fish selection" [multiple]="true">
+		<mat-chip *ngFor="let tag of tags"
+				  [selected]="isTagSelected(tag)"
+				  (click)="filterByTag(tag)">{{tag}}</mat-chip>
+	</mat-chip-list>
+</div>
+
+<app-comment *ngFor="let comment of filteredComments"
+			 [comment]="comment"
+			 [allTags]="tags"
+			 (delete)="deleteComment($event)"
+			 (edit)="addComment($event)">
+</app-comment>
+<app-editor (formSubmit)="addComment($event)"
+			[allTags]="tags"
+			[commentToEdit]="commentToEdit">
+</app-editor>

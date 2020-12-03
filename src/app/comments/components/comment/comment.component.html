@@ -1,0 +1,22 @@
+<div class="comment-container" *ngIf="!editMode">
+	<div class="header">
+		<h2>{{comment.title}}</h2>
+		<div class="buttons">
+			<button mat-stroked-button (click)="onEdit(comment)">
+				Edit
+			</button>
+			<button mat-icon-button color="warn" (click)="onDelete(comment.id)" title="delete" aria-label="delete">
+				<mat-icon>delete</mat-icon>
+			</button>
+		</div>
+	</div>
+	<div class="content">
+		<p [innerHTML]="comment.text"></p>
+		<div class="tags">
+			<mat-chip-list aria-label="Fish selection">
+				<mat-chip *ngFor="let tag of comment.tags" color="primary">{{tag}}</mat-chip>
+			</mat-chip-list>
+		</div>
+	</div>
+</div>
+<ng-template #editorContainer></ng-template>

@@ -1,0 +1,30 @@
+.container {
+	background-color: lightgray;
+	padding: 5px;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		.chip-list {
+			.tag-input {
+				background-color: white;
+				border: 1px solid lightgray;
+				border-radius: 3px;
+				padding: 0;
+			}
+
+			.mat-form-field-wrapper ::ng-deep {
+				.mat-form-field-underline {
+					display: none !important;
+					height: 0 !important;
+				}
+			}
+		}
+	}
+
+	.buttons {
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+	}
+}

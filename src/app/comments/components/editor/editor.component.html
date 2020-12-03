@@ -1,0 +1,37 @@
+<div class="container">
+	<h2>{{title}} Comment</h2>
+	<form [formGroup]="commentForm">
+		<label>Title:</label>
+		<input formControlName="title">
+		<label>Comment:</label>
+		<textarea formControlName="text"></textarea>
+	</form>
+	<p>Tags:</p>
+	<mat-chip-list #chipList aria-label="Tags selection">
+		<mat-chip
+			*ngFor="let tag of addedTags"
+			[selectable]="false"
+			[removable]="true"
+			(removed)="removeTag(tag)">
+			{{tag}}
+			<mat-icon matChipRemove>cancel</mat-icon>
+		</mat-chip>
+		<input class="tag-input"
+			   #tagInput
+			   [formControl]="tagsCtrl"
+			   [matAutocomplete]="auto"
+			   [matChipInputFor]="chipList"
+			   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+			   (matChipInputTokenEnd)="add($event)">
+	</mat-chip-list>
+	<mat-autocomplete #auto="matAutocomplete"
+					  (optionSelected)="tagSelected($event.option.value)">
+		<mat-option *ngFor="let tag of allTags" [value]="tag">
+			{{tag}}
+		</mat-option>
+	</mat-autocomplete>
+	<div class="buttons">
+		<button mat-raised-button color="warn" *ngIf="editMode" (click)="cancel()">Cancel</button>
+		<button mat-raised-button color="primary" type="submit" (click)="onSubmit()">{{buttonTitle}}</button>
+	</div>
+</div>
