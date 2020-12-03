@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "First comment",
+    "text": "This is a description of the item, <b>it</b> might describe a <i>bug/task/comment</i>, it can also display <a href=\"www.google.com\">Links</a>",
+    "tags": ["bug", "issue", "etc", "asd", "wtf", "zxc"]
+  },{
+    "id": 2,
+    "title": "Second comment",
+    "text": "This is a description of the item, <b>it</b> might describe a <i>bug/task/comment</i>, it can also display <a href=\"www.google.com\">Links</a>",
+    "tags": ["issue", "etc"]
+  },{
+    "id": 3,
+    "title": "Third comment",
+    "text": "This is a description of the item, <b>it</b> might describe a <i>bug/task/comment</i>, it can also display <a href=\"www.google.com\">Links</a>",
+    "tags": ["bug", "etc"]
+  },{
+    "id": 4,
+    "title": "Fourth comment",
+    "text": "This is a description of the item, <p>it</p> might describe a <i>bug/task/comment</i>, it can also display <a href=\"www.google.com\">Links</a>",
+    "tags": ["issue", "etc"]
+  }
+]
